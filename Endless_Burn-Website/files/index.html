@@ -26,6 +26,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://kit.fontawesome.com/87e2f7b4fa.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="active-preloader-ovh">
 
@@ -703,17 +706,111 @@
 
 <section class="hidden-sidebar side-navigation">
     <a href="#" class="close-button side-navigation-close-btn fa fa-times"></a><!-- /.close-button -->
-    <div class="sidebar-content">
-        <h3>Endless Burn Crypto <br /> Currency <br /> Html Template</h3> 
-        <p>Lorem ipsum dolor sit amet adipiscing elitn quis ex et mauris vulputate semper Etiam eget lacus dapibs ultricies diam vel sollicitudin.</p>
-        <p class="contact-info">Inquiry@endlessburn.com <br /> 2800 256 508</p><!-- /.contact-info -->
-        <div class="social">
-        	<a href="#" class="fa fa-twitter"></a><!--
-        	--><a href="#" class="fa fa-facebook"></a><!--
-        	--><a href="#" class="fa fa-youtube-play"></a><!--
-        	--><a href="#" class="fa fa-pinterest"></a>
-        </div><!-- /.social -->
-    </div><!-- /.sidebar-content -->
+		<div class="py-7 login flex justify-center sm:justify-between items-center min-h-screen relative z-50">
+			<div class=" w-full ">
+	  <p class="text-2lg text-dark text-center">
+		Don't have an account?
+		<router-link
+		  class="text-2lg ml-1 font-semibold underline hover:tracking-wider"
+		  :to="{ name: 'Register' }"
+		  >Register</router-link
+		>
+	  </p>
+	  <div class="w-full">
+		<h1 class="font-semibold tracking-wider text-xl text-center">Login </h1>
+		<form class="bg-white px-5 pt-6 pb-8 mb-4">
+		  <p
+				class="
+				  error
+				  text-center
+				  mb-2
+				  text-red-300 text-sm
+				  tracking-wide
+				  font-semibold
+				"
+			  >
+			  </p>
+			<div class="mb-4 relative ">
+			<i class="fas fa-envelope absolute top-3 left-1 text-dark z-10"></i>        <input
+			  class="
+				bg-gray-100
+				appearance-none
+				border
+				rounded
+				w-full
+				py-2
+				px-8
+				text-dark
+				leading-tight
+				focus:outline-none focus:shadow-outline
+			  "
+			  type="email"
+			  required
+			  placeholder="Email"
+			/>
+		  </div>
+		  <div class="mb-4 relative ">
+			<i class="fas fa-lock absolute top-3 left-1 text-dark z-10"></i>     
+			<input
+				  type="checkbox"
+				  @click="toggledInputField"
+				  class="absolute top-3 right-3 z-10"
+				/>
+			   <input
+			  class="
+				appearance-none
+				bg-gray-100
+				rounded
+				w-full
+				py-2
+				px-8
+				text-dark
+				mb-3
+				leading-tight
+				focus:outline-none focus:shadow-outline
+			  "
+			  :type="inputField"
+			  placeholder="Password"
+			/>
+		  </div>
+		  <div class="flex flex-col items-center justify-between">
+		   
+			<button
+			@click="Login()"
+			  class="
+				bg-black
+				hover:tracking-wider
+				text-white
+				font-bold
+				py-2
+				px-4
+				rounded
+				focus:outline-none focus:shadow-outline
+			  "
+			  type="button"
+			>
+			  Sign In
+			</button>
+			<router-link
+			  :to="{ name: 'ForgotPassword' }"
+			  class="
+				my-5
+				inline-block
+				align-baseline
+				font-bold
+				text-sm text-dark
+				hover:tracking-wider
+				text-2xl
+			  "
+			>
+			  Forgot Password?
+			</router-link>
+		  </div>
+		</form>
+	  </div>
+	  </div>
+	 
+	</div>
 </section><!-- /.hidden-sidebar -->
 
 
